@@ -5,6 +5,11 @@
 int main(int argc, char* argv[]) {
   char* text = NULL;
 
+  if (argc < 3) {
+    printf("Usage: repeater [STRING] [QUANTITY]\n");
+    exit(1);
+  }
+
   int times = atoi(argv[2]);
 
   if (times == 0) {
